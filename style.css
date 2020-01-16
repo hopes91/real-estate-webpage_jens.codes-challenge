@@ -1,0 +1,12 @@
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 1em;
+}
