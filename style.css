@@ -8,5 +8,73 @@ body,
 
 .container {
   box-sizing: border-box;
+  overflow: hidden;
   padding: 1em;
+  position: relative;
+}
+
+.slider {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+}
+
+.slider .arrows {
+  bottom: 0;
+  height: 8em;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.arrows .arrow {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  height: 8em;
+  position: absolute;
+  width: 8em;
+  z-index: 1;
+}
+
+.arrows .arrow-left {
+  left: 0;
+}
+
+.arrows .arrow-right {
+  right: 0;
+}
+
+.slider .slide {
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.slider .dots {
+  bottom: 2em;
+  height: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.dots .dot {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0.1em solid rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.8em;
+  margin: 0 0.1em;
+  width: 0.8em;
 }
