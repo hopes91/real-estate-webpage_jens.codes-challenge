@@ -265,6 +265,7 @@ main {
 
   .title {
     background-color: rgba(255, 255, 255, 0.8);
+    border: 0.05em solid #b8b6b7;
     box-sizing: border-box;
     height: 16em;
     left: 0;
