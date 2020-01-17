@@ -26,7 +26,7 @@ const handleAnimation = () => {
 
   if (window.innerWidth > 800) {
     setTimeout(() => {
-      socialMediaIconsContainer.style.bottom = '1em';
+      socialMediaIconsContainer.style.top = '0';
     }, 1000);
   }
 

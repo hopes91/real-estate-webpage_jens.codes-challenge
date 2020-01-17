@@ -72,30 +72,12 @@ header {
   font-weight: normal;
 }
 
-.social-media-icons {
-  bottom: -2em;
-  box-sizing: border-box;
-  height: 2em;
-  left: 0;
-  padding: 0 1.5em;
 main {
   height: 100%;
   position: absolute;
   right: 0;
   top: 0;
   width: 50%;
-}
-
-.social-media-icons a {
-  display: inline-block;
-  height: 2em;
-  margin: 0 0.1em;
-  text-align: center;
-  width: 2em;
-}
-
-.social-media-icons a img {
-  height: 2em;
 }
 
 .slider {
@@ -168,6 +150,37 @@ main {
   width: 0.7em;
 }
 
+footer {
+  bottom: 1em;
+  box-sizing: border-box;
+  height: 2em;
+  left: -1.5em;
+  padding: 0 1.5em;
+  position: absolute;
+  width: 50%;
+}
+
+.social-media-icons {
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  top: 3em;
+  transition: 1s;
+  width: 100%;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  height: 2em;
+  margin: 0 0.1em;
+  text-align: center;
+  width: 2em;
+}
+
+.social-media-icons a img {
+  height: 2em;
+}
+
 @media screen and (max-width: 1366px) {
   .title {
     height: 10em;
@@ -216,10 +229,6 @@ main {
     top: 8.5em;
   }
 
-  .social-media-icons {
-    width: 38%;
-  }
-
   main {
     width: 62%;
   }
@@ -231,6 +240,10 @@ main {
   .arrows .arrow {
     height: 7em;
     width: 7em;
+  }
+
+  footer {
+    width: 38%;
   }
 }
 
@@ -281,10 +294,9 @@ main {
     width: 5em;
   }
 
-  .social-media-icons {
+  footer {
     bottom: -4.5em;
     height: 2.5em;
-    left: 0;
     margin-bottom: 1em;
     width: 100%;
   }
