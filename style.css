@@ -14,11 +14,13 @@ body,
 }
 
 .title {
-  height: 20em;
-  left: 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 15em;
+  left: 3%;
   position: relative;
   top: 20%;
-  width: 45%;
+  width: 42%;
+  z-index: 1;
 }
 
 .title h1 {
@@ -37,16 +39,18 @@ body,
 
 .line-through.one {
   left: -0.5em;
-  max-width: 20em;
-  top: 3.2em;
-  width: 60%;
+  top: 3.1em;
+  width: 20em;
 }
 
 .line-through.two {
   left: -1.5em;
-  max-width: 30em;
   top: 7.7em;
-  width: 80%;
+  width: 30em;
+}
+
+.line-through.three {
+  display: none;
 }
 
 .title h2 {
@@ -74,7 +78,7 @@ body,
 }
 
 .arrows .arrow {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   height: 8em;
   position: absolute;
@@ -102,7 +106,7 @@ body,
 }
 
 .slider .dots {
-  bottom: 2em;
+  bottom: 1em;
   height: 0.7em;
   position: absolute;
   text-align: center;
@@ -119,4 +123,119 @@ body,
   margin: 0 0.1em;
   width: 0.7em;
 }
+
+@media screen and (max-width: 1366px) {
+  .title {
+    left: 2%;
+    width: 47%;
+  }
+
+  .title h1 {
+    font-size: 2.8em;
+  }
+
+  .title h2 {
+    font-size: 1.3em;
+  }
+
+  .line-through {
+    height: 1.2em;
+  }
+
+  .line-through.one {
+    top: 2em;
+    width: 14.5em;
+  }
+
+  .line-through.two {
+    left: -1em;
+    top: 5.3em;
+    width: 21em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    left: 1.5%;
+    width: 33%;
+  }
+
+  .line-through.two {
+    left: -1em;
+    top: 4.9em;
+    width: 11em;
+  }
+
+  .line-through.three {
+    display: inline-block;
+    left: -1em;
+    top: 8.5em;
+    width: 17em;
+  }
+
+  .slider {
+    width: 62%;
+  }
+
+  .slider .arrows {
+    height: 7em;
+  }
+
+  .arrows .arrow {
+    height: 7em;
+    width: 7em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    box-sizing: border-box;
+    height: 16.5em;
+    left: 0;
+    margin: 0 auto;
+    padding: 1em;
+    top: 10%;
+    width: 20em;
+  }
+
+  .line-through.one {
+    top: 3em;
+    width: 15.5em;
+  }
+
+  .line-through.two {
+    top: 6em;
+    width: 12em;
+  }
+
+  .line-through.three {
+    top: 9.5em;
+    width: 17.5em;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slider .arrows {
+    height: 5em;
+    top: 65%;
+  }
+
+  .arrows .arrow {
+    height: 5em;
+    width: 5em;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .title {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    width: 95%;
+  }
 }
