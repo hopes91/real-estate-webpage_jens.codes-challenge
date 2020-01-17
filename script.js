@@ -15,7 +15,7 @@ const handleAnimation = () => {
   setTimeout(() => {
     slider.style.right = '0';
     showSlides();
-    // moveSlides();
+    moveSlides();
   }, 0);
 
   setTimeout(() => {
