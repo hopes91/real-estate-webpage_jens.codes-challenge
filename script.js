@@ -38,72 +38,51 @@ const handleAnimation = () => {
     titleH2.style.opacity = '1';
   }, 2000);
 
-  if (window.innerWidth > 1366) {
+  if (window.innerWidth > 1200) {
     setTimeout(() => {
       lineThrough1.style.width = '20em';
       lineThrough2.style.width = '30em';
     }, 2500);
   }
 
-  if (window.innerWidth <= 1366) {
+  if (window.innerWidth <= 1200) {
     setTimeout(() => {
-      lineThrough1.style.width = '14.5em';
-      lineThrough2.style.width = '21em';
+      lineThrough1.style.width = '17em';
+      lineThrough2.style.width = '26em';
     }, 2500);
   }
 
   if (window.innerWidth <= 1024) {
     setTimeout(() => {
-      lineThrough2.style.width = '11em';
-      lineThrough3.style.width = '17em';
+      lineThrough2.style.width = '13em';
+      lineThrough3.style.width = '15.5em';
     }, 2500);
   }
 
   if (window.innerWidth <= 800) {
     setTimeout(() => {
-      lineThrough1.style.width = '15.5em';
-      lineThrough2.style.width = '12em';
-      lineThrough3.style.width = '17.5em';
+      lineThrough1.style.width = '16.3em';
+      lineThrough2.style.width = '12.8em';
+      lineThrough3.style.width = '14.8em';
     }, 2500);
   }
 
-  setTimeout(() => {
-    moveSlides();
-  }, 3000);
+  // setTimeout(() => {
+  //   moveSlides();
+  // }, 3000);
 };
 
-const handleTitleDecor = () => {
-  if (window.innerWidth > 1366) {
-    lineThrough1.style.width = '20em';
-    lineThrough2.style.width = '30em';
-    lineThrough3.style.transitionDuration = '0s';
-    lineThrough3.style.width = '0';
-  }
+const createDots = () => {
+  dotsContainer.innerHTML = '';
 
-  if (window.innerWidth <= 1366) {
-    lineThrough1.style.width = '14.5em';
-    lineThrough2.style.width = '21em';
-    lineThrough3.style.transitionDuration = '0s';
-    lineThrough3.style.width = '0';
-  }
-
-  if (window.innerWidth <= 1024) {
-    lineThrough2.style.width = '11em';
-    lineThrough3.style.width = '17em';
-  }
-
-  if (window.innerWidth <= 800) {
-    lineThrough1.style.width = '15.5em';
-    lineThrough2.style.width = '12em';
-    lineThrough3.style.width = '17.5em';
-  }
+  slides.forEach(slide => {
+    const dot = document.createElement('span');
+    dot.setAttribute('class', 'dot');
+    dotsContainer.appendChild(dot);
+  });
 };
 
 let mainSlide = 0;
-
-const moveSlides = () => {
-  setInterval(() => handleArrows(1), 5000);
-};
 
 const isArrowFocused = () => {
   return document.activeElement === arrowLeft ||
@@ -173,6 +152,33 @@ const indicateHoverOverTitle = () => {
 
 const indicateHoverOffTitle = () => {
   linesThrough.forEach(line => line.style.backgroundColor = '#b8b6b7');
+};
+
+const handleTitleDecor = () => {
+  if (window.innerWidth > 1200) {
+    lineThrough1.style.width = '20em';
+    lineThrough2.style.width = '30em';
+    lineThrough3.style.transitionDuration = '0s';
+    lineThrough3.style.width = '0';
+  }
+
+  if (window.innerWidth <= 1200) {
+    lineThrough1.style.width = '17em';
+    lineThrough2.style.width = '26em';
+    lineThrough3.style.transitionDuration = '0s';
+    lineThrough3.style.width = '0';
+  }
+
+  if (window.innerWidth <= 1024) {
+    lineThrough2.style.width = '13em';
+    lineThrough3.style.width = '15.5em';
+  }
+
+  if (window.innerWidth <= 800) {
+    lineThrough1.style.width = '16.3em';
+    lineThrough2.style.width = '12.8em';
+    lineThrough3.style.width = '14.8em';
+  }
 };
 
 window.addEventListener('load', handleAnimation);
