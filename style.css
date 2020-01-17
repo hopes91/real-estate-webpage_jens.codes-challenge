@@ -13,13 +13,21 @@ body,
   position: relative;
 }
 
+header {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
 .title {
   background-color: rgba(255, 255, 255, 0.8);
-  height: 15em;
-  left: 3%;
+  height: 13em;
+  left: 5%;
   position: relative;
   top: 20%;
-  width: 42%;
+  width: 93%;
   z-index: 1;
 }
 
@@ -161,8 +169,7 @@ body,
 
 @media screen and (max-width: 1366px) {
   .title {
-    left: 2%;
-    width: 47%;
+    height: 10em;
   }
 
   .title h1 {
@@ -188,9 +195,14 @@ body,
 }
 
 @media screen and (max-width: 1024px) {
+  header {
+    width: 38%;
+  }
+
   .title {
-    left: 1.5%;
-    width: 33%;
+    height: 15em;
+    left: 7%;
+    width: 80%;
   }
 
   .line-through.two {
@@ -226,9 +238,14 @@ body,
     overflow-y: auto;
   }
 
+  header {
+    height: 100vh;
+    width: 100%;
+  }
+
   .title {
     box-sizing: border-box;
-    height: 16.5em;
+    height: 16em;
     left: 0;
     margin: 0 auto;
     padding: 1em;
@@ -283,7 +300,7 @@ body,
 
 @media screen and (max-width: 800px) and (orientation: landscape) {
   .title {
-    top: 0;
+    top: 3%;
   }
 
   .slider .arrows {
