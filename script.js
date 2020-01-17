@@ -1,3 +1,5 @@
+const arrowLeft = document.querySelector('.arrows .arrow-left');
+const arrowRight = document.querySelector('.arrows .arrow-right');
 const slides = document.querySelectorAll('.slide');
 
 const handleAnimation = () => {
@@ -8,14 +10,12 @@ const handleAnimation = () => {
   const lineThrough3 = document.querySelector('.line-through.three');
   const socialMediaIconsContainer = document.querySelector('.social-media-icons');
   const slider = document.querySelector('.slider');
-  const arrowLeft = document.querySelector('.arrows .arrow-left');
-  const arrowRight = document.querySelector('.arrows .arrow-right');
   const dotsContainer = document.querySelector('.dots');
 
   setTimeout(() => {
     slider.style.right = '0';
     showSlides();
-    moveSlides();
+    // moveSlides();
   }, 0);
 
   setTimeout(() => {
@@ -103,6 +103,21 @@ const moveSlides = () => {
   setInterval(() => handleArrows(1), 5000);
 };
 
+const isArrowFocused = () => {
+  return document.activeElement === arrowLeft ||
+         document.activeElement === arrowRight;
+};
+
+const handleArrowsOnKeyDown = event => {
+  if (isArrowFocused()) {
+    event.key === 'ArrowLeft' &&
+      handleArrows(-1);
+
+    event.key === 'ArrowRight' &&
+      handleArrows(1);
+  }
+};
+
 const handleArrows = index => {
   mainSlide === 0 && index === -1 ?
     mainSlide = slides.length - 1 :
@@ -156,3 +171,6 @@ const createDots = () => {
 
 window.addEventListener('load', handleAnimation);
 window.addEventListener('resize', handleTitleDecor);
+window.addEventListener('keydown', handleArrowsOnKeyDown);
+arrowLeft.addEventListener('click', () => handleArrows(-1), false);
+arrowRight.addEventListener('click', () => handleArrows(1), false);
