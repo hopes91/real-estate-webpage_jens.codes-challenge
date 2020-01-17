@@ -150,7 +150,7 @@ main {
   width: 0.7em;
 }
 
-footer {
+/* footer {
   bottom: 1em;
   box-sizing: border-box;
   height: 2em;
@@ -179,7 +179,7 @@ footer {
 
 .social-media-icons a img {
   height: 2em;
-}
+} */
 
 @media screen and (max-width: 1366px) {
   .title {
@@ -242,9 +242,9 @@ footer {
     width: 7em;
   }
 
-  footer {
+  /* footer {
     width: 38%;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) {
@@ -294,7 +294,7 @@ footer {
     width: 5em;
   }
 
-  footer {
+  /* footer {
     bottom: -4.5em;
     height: 2.5em;
     margin-bottom: 1em;
@@ -309,7 +309,7 @@ footer {
 
   .social-media-icons a img {
     height: 2.5em;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape) {

@@ -9,7 +9,7 @@ const arrowRight = document.querySelector('.arrows .arrow-right');
 const dotsContainer = document.querySelector('.dots');
 const dots = document.querySelectorAll('.dot');
 const slides = document.querySelectorAll('.slide');
-const socialMediaIconsContainer = document.querySelector('.social-media-icons');
+// const socialMediaIconsContainer = document.querySelector('.social-media-icons');
 
 const handleAnimation = () => {
   setTimeout(() => {
@@ -23,11 +23,11 @@ const handleAnimation = () => {
     dotsContainer.style.bottom = '1em';
   }, 1000);
 
-  if (window.innerWidth > 800) {
-    setTimeout(() => {
-      socialMediaIconsContainer.style.top = '0';
-    }, 1000);
-  }
+  // if (window.innerWidth > 800) {
+  //   setTimeout(() => {
+  //     socialMediaIconsContainer.style.top = '0';
+  //   }, 1000);
+  // }
 
   setTimeout(() => {
     titleH1.style.opacity = '1';
