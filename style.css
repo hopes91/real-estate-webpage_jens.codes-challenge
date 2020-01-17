@@ -6,6 +6,10 @@ body,
   width: 100%;
 }
 
+body * {
+  outline-color: #7f838c;
+}
+
 .container {
   box-sizing: border-box;
   overflow: hidden;
