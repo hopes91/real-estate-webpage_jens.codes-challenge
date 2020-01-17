@@ -8,7 +8,7 @@ body,
 
 .container {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 1em;
   position: relative;
 }
@@ -56,6 +56,29 @@ body,
 .title h2 {
   font-family: sans-serif;
   font-weight: normal;
+}
+
+.social-media-icons {
+  bottom: 1em;
+  box-sizing: border-box;
+  height: 2em;
+  left: 0;
+  padding: 0 1.5em;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  height: 2em;
+  margin: 0 0.1em;
+  text-align: center;
+  width: 2em;
+}
+
+.social-media-icons a img {
+  height: 2em;
 }
 
 .slider {
@@ -173,6 +196,10 @@ body,
     width: 17em;
   }
 
+  .social-media-icons {
+    width: 38%;
+  }
+
   .slider {
     width: 62%;
   }
@@ -213,24 +240,51 @@ body,
     width: 17.5em;
   }
 
+  .social-media-icons {
+    bottom: -7em;
+    height: 2.5em;
+    left: 0;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .social-media-icons a {
+    height: 2.5em;
+    margin: 0 0.1em;
+    width: 2.5em;
+  }
+
+  .social-media-icons a img {
+    height: 2.5em;
+  }
+
   .slider {
     width: 100%;
   }
 
   .slider .arrows {
     height: 5em;
-    top: 65%;
+    top: 80%;
   }
 
   .arrows .arrow {
     height: 5em;
     width: 5em;
   }
+
+  .slider .dots {
+    bottom: -3em;
+    padding: 1em 0;
+  }
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape) {
   .title {
     top: 0;
+  }
+
+  .slider .arrows {
+    top: 60%;
   }
 }
 
