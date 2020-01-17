@@ -1,17 +1,17 @@
+const titleH1 = document.querySelector('.title h1');
+const titleH2 = document.querySelector('.title h2');
+const lineThrough1 = document.querySelector('.line-through.one');
+const lineThrough2 = document.querySelector('.line-through.two');
+const lineThrough3 = document.querySelector('.line-through.three');
+const slider = document.querySelector('.slider');
 const arrowLeft = document.querySelector('.arrows .arrow-left');
 const arrowRight = document.querySelector('.arrows .arrow-right');
+const dotsContainer = document.querySelector('.dots');
+const dots = document.querySelectorAll('.dot');
 const slides = document.querySelectorAll('.slide');
+const socialMediaIconsContainer = document.querySelector('.social-media-icons');
 
 const handleAnimation = () => {
-  const titleH1 = document.querySelector('.title h1');
-  const titleH2 = document.querySelector('.title h2');
-  const lineThrough1 = document.querySelector('.line-through.one');
-  const lineThrough2 = document.querySelector('.line-through.two');
-  const lineThrough3 = document.querySelector('.line-through.three');
-  const socialMediaIconsContainer = document.querySelector('.social-media-icons');
-  const slider = document.querySelector('.slider');
-  const dotsContainer = document.querySelector('.dots');
-
   setTimeout(() => {
     slider.style.right = '0';
     showSlides();
@@ -72,10 +72,6 @@ const handleAnimation = () => {
 };
 
 const handleTitleDecor = () => {
-  const lineThrough1 = document.querySelector('.line-through.one');
-  const lineThrough2 = document.querySelector('.line-through.two');
-  const lineThrough3 = document.querySelector('.line-through.three');
-
   if (window.innerWidth > 1366) {
     lineThrough1.style.width = '20em';
     lineThrough2.style.width = '30em';
@@ -145,8 +141,6 @@ const showSlides = () => {
 };
 
 const detectCurrentSlide = () => {
-  const dots = document.querySelectorAll('.dot');
-
   dots.forEach(dot => {
     dot.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
     dot.style.borderColor = 'rgba(0, 0, 0, 0.7)';
@@ -161,8 +155,6 @@ const detectCurrentSlide = () => {
 };
 
 const createDots = () => {
-  const dotsContainer = document.querySelector('.dots');
-
   dotsContainer.innerHTML = '';
 
   slides.forEach(slide => {
