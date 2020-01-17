@@ -78,9 +78,11 @@ header {
   height: 2em;
   left: 0;
   padding: 0 1.5em;
+main {
+  height: 100%;
   position: absolute;
-  text-align: center;
-  transition: 1s;
+  right: 0;
+  top: 0;
   width: 50%;
 }
 
@@ -103,7 +105,7 @@ header {
   right: -100%;
   top: 0;
   transition: 1s;
-  width: 50%;
+  width: 100%;
 }
 
 .slider .arrows {
@@ -218,7 +220,7 @@ header {
     width: 38%;
   }
 
-  .slider {
+  main {
     width: 62%;
   }
 
@@ -243,6 +245,7 @@ header {
   }
 
   .title {
+    background-color: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     height: 16em;
     left: 0;
@@ -264,6 +267,20 @@ header {
     top: 9.5em;
   }
 
+  main {
+    width: 100%;
+  }
+
+  .slider .arrows {
+    height: 5em;
+    top: 80%;
+  }
+
+  .arrows .arrow {
+    height: 5em;
+    width: 5em;
+  }
+
   .social-media-icons {
     bottom: -4.5em;
     height: 2.5em;
@@ -280,20 +297,6 @@ header {
 
   .social-media-icons a img {
     height: 2.5em;
-  }
-
-  .slider {
-    width: 100%;
-  }
-
-  .slider .arrows {
-    height: 5em;
-    top: 80%;
-  }
-
-  .arrows .arrow {
-    height: 5em;
-    width: 5em;
   }
 }
 
