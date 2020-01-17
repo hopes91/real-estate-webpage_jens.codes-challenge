@@ -1,17 +1,16 @@
 const titleH1 = document.querySelector('.title h1');
-const titleH2 = document.querySelector('.title h2');
-const linesThrough = document.querySelectorAll('.line-through');
-const lineThrough1 = document.querySelector('.line-through.one');
-const lineThrough2 = document.querySelector('.line-through.two');
-const lineThrough3 = document.querySelector('.line-through.three');
-const slider = document.querySelector('.slider');
 const arrowLeft = document.querySelector('.arrows .arrow-left');
 const arrowRight = document.querySelector('.arrows .arrow-right');
-const dotsContainer = document.querySelector('.dots');
 const slides = document.querySelectorAll('.slide');
-// const socialMediaIconsContainer = document.querySelector('.social-media-icons');
 
 const handleAnimation = () => {
+  const titleH2 = document.querySelector('.title h2');
+  const lineThrough1 = document.querySelector('.line-through.one');
+  const lineThrough2 = document.querySelector('.line-through.two');
+  const lineThrough3 = document.querySelector('.line-through.three');
+  const slider = document.querySelector('.slider');
+  const dotsContainer = document.querySelector('.dots');
+
   setTimeout(() => {
     slider.style.right = '0';
     createDots();
@@ -23,12 +22,6 @@ const handleAnimation = () => {
     arrowRight.style.right = '0';
     dotsContainer.style.bottom = '1em';
   }, 1000);
-
-  // if (window.innerWidth > 800) {
-  //   setTimeout(() => {
-  //     socialMediaIconsContainer.style.top = '0';
-  //   }, 1000);
-  // }
 
   setTimeout(() => {
     titleH1.style.opacity = '1';
@@ -67,12 +60,14 @@ const handleAnimation = () => {
     }, 2500);
   }
 
-  // setTimeout(() => {
-  //   moveSlides();
-  // }, 3000);
+  setTimeout(() => {
+    moveSlides();
+  }, 3000);
 };
 
 const createDots = () => {
+  const dotsContainer = document.querySelector('.dots');
+
   dotsContainer.innerHTML = '';
 
   slides.forEach(slide => {
@@ -140,14 +135,22 @@ const moveSlides = () => {
 };
 
 const indicateHoverOverTitle = () => {
+  const linesThrough = document.querySelectorAll('.line-through');
+
   linesThrough.forEach(line => line.style.backgroundColor = '#7f838c');
 };
 
 const indicateHoverOffTitle = () => {
+  const linesThrough = document.querySelectorAll('.line-through');
+
   linesThrough.forEach(line => line.style.backgroundColor = '#b8b6b7');
 };
 
 const handleTitleDecor = () => {
+  const lineThrough1 = document.querySelector('.line-through.one');
+  const lineThrough2 = document.querySelector('.line-through.two');
+  const lineThrough3 = document.querySelector('.line-through.three');
+
   if (window.innerWidth > 1200) {
     lineThrough1.style.width = '20em';
     lineThrough2.style.width = '30em';
