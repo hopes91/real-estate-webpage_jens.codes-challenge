@@ -117,6 +117,10 @@ main {
   z-index: 1;
 }
 
+.arrows .arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .arrows .arrow-left {
   left: -8em;
 }
