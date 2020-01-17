@@ -15,7 +15,6 @@ const handleAnimation = () => {
   setTimeout(() => {
     slider.style.right = '0';
     showSlides();
-    moveSlides();
   }, 0);
 
   setTimeout(() => {
@@ -66,6 +65,10 @@ const handleAnimation = () => {
       lineThrough3.style.width = '17.5em';
     }, 2500);
   }
+
+  setTimeout(() => {
+    moveSlides();
+  }, 3000);
 };
 
 const handleTitleDecor = () => {
